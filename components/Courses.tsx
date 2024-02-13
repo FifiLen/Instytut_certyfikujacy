@@ -71,7 +71,7 @@ export function Courses() {
 
       
           {courses.map((course) => (
-            <CarouselItem key={course.id} className="pl-1 md:basis-1/2 lg:basis-1/2">
+            <CarouselItem key={course.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
             <CourseCard key={course.id} course={course} />
             </CarouselItem>
           ))}

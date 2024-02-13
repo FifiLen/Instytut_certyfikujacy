@@ -2,7 +2,7 @@ const courses = [
   {
     "id": "terapeuta_vr",
     "title": "Terapeuta VR",
-    "subtitle": "Rewolucja w terapii - zanurz się w przyszłość",
+    "subtitle": "Rewolucja w terapii - zanurz się w przyszłość.",
     "description": "Kurs Terapeuta VR to innowacyjne szkolenie łączące zaawansowane technologie wirtualnej rzeczywistości z nowoczesnymi metodami terapii. Przeznaczony dla psychologów, terapeutów oraz studentów psychologii, kurs ma na celu wyposażyć uczestników w wiedzę i umiejętności niezbędne do wykorzystania VR w praktyce klinicznej.",
     "duration": "6 miesięcy",
     "mode": "Hybrydowo",
@@ -17,37 +17,47 @@ const courses = [
         "id": "modul1",
         "title": "Wprowadzenie do VR",
         "topics": [
-          "Historia VR",
-          "Podstawowe technologie VR",
-          "Technologie immersyjne i ich wpływ na percepcję",
-          "Przegląd urządzeń VR: gogle, sensory ruchu, haptics",
-          "Bezpieczeństwo i ergonomia w środowisku VR"
+          "- Historia VR",
+          "- Podstawowe technologie VR",
+          "- Technologie immersyjne i ich wpływ na percepcję",
+          "- Przegląd urządzeń VR: gogle, sensory ruchu, haptics",
+          "- Bezpieczeństwo i ergonomia w środowisku VR"
         ]
       },
       {
         "id": "modul2",
         "title": "Zastosowania terapeutyczne VR",
         "topics": [
-          "VR w psychoterapii",
-          "VR w rehabilitacji",
-          "VR w leczeniu PTSD i lęków",
-          "Symulacje VR wspierające rozwój umiejętności społecznych",
-          "Wirtualna ekspozycja i jej zastosowania terapeutyczne"
+          "- VR w psychoterapii",
+          "- VR w rehabilitacji",
+          "- VR w leczeniu PTSD i lęków",
+          "- Symulacje VR wspierające rozwój umiejętności społecznych",
+          "- Wirtualna ekspozycja i jej zastosowania terapeutyczne"
         ]
       }
     ],
     "requirements": [
-      "Podstawowa wiedza z psychologii",
-      "Znajomość obsługi komputerów",
-      "Zainteresowanie zastosowaniami VR w psychologii i terapii",
-      "Gotowość do nauki obsługi nowych technologii"
+      "- Podstawowa wiedza z psychologii",
+      "- Znajomość obsługi komputerów",
+      "- Zainteresowanie zastosowaniami VR w psychologii i terapii",
+      "- Gotowość do nauki obsługi nowych technologii"
     ],
-    "targetAudience": "Psychologowie, terapeuci, studenci psychologii",
+
+    "target": [
+      "- Psychologowie",
+      "- Terapeuci",
+      "- Studenci psychologii",
+    ],
+
+    
+
+
+
     "outcomes": [
       "Umiejętność stosowania VR w terapii",
       "Zrozumienie mechanizmów działania VR",
       "Opanowanie technik VR stosowanych w terapii behawioralnej i poznawczej",
-      "Umiejętność projektowania indywidualnych programów terapeutycznych z wykorzystaniem VR"
+      "Umiejętność projektowania indywidualnych programów terapeutycznych"
     ],
     "testimonials": [
       {
@@ -58,7 +68,8 @@ const courses = [
         "name": "Aleksandra Nowak",
         "text": "Kurs otworzył mi oczy na niesamowite możliwości, jakie VR oferuje w terapii. Praktyczne warsztaty i profesjonalne materiały pozwoliły mi szybko wprowadzić te techniki do mojej praktyki."
       }
-    ]
+    ],
+    "image" : "vr3.png"
   },
   
 
@@ -81,31 +92,40 @@ const courses = [
         "id": "modul1",
         "title": "Podstawy VR",
         "topics": [
-          "Wprowadzenie do wirtualnej rzeczywistości",
-          "Technologie i urządzenia VR",
-          "Podstawy projektowania doświadczeń VR",
-          "Zastosowania VR w różnych branżach",
-          "Bezpieczeństwo i ergonomia w użytkowaniu VR"
+          "- Wprowadzenie do wirtualnej rzeczywistości",
+          "- Technologie i urządzenia VR",
+          "- Podstawy projektowania doświadczeń VR",
+          "- Zastosowania VR w różnych branżach",
+          "- Bezpieczeństwo i ergonomia w użytkowaniu VR"
         ]
       },
       {
         "id": "modul2",
         "title": "Zaawansowane techniki i zastosowania",
         "topics": [
-          "Zaawansowane narzędzia i oprogramowanie VR",
-          "Projektowanie interaktywnych doświadczeń VR",
-          "VR w edukacji i szkoleniach",
-          "VR w terapii i wsparciu zdrowia psychicznego",
-          "Trendy i przyszłość technologii VR"
+          "- Zaawansowane narzędzia i oprogramowanie VR",
+          "- Projektowanie interaktywnych doświadczeń VR",
+          "- VR w edukacji i szkoleniach",
+          "- VR w terapii i wsparciu zdrowia psychicznego",
+          "- Trendy i przyszłość technologii VR"
         ]
       }
     ],
     "requirements": [
-      "Dostęp do urządzenia VR",
-      "Podstawowa wiedza z obsługi komputera",
-      "Zainteresowanie technologią VR i jej zastosowaniami"
+      "- Dostęp do urządzenia VR",
+      "- Podstawowa wiedza z obsługi komputera",
+      "- Zainteresowanie technologią VR i jej zastosowaniami"
     ],
-    "targetAudience": "Profesjonaliści, studenci, entuzjaści VR, osoby zainteresowane wykorzystaniem VR w edukacji, terapii i rozwoju osobistym",
+    "targetAudience": ", s, , , terapii i rozwoju osobistym",
+
+
+    "target": [
+      "- Profesjonaliści",
+      "- Studenci",
+      "- Entuzjaści VR",
+      "- Osoby zainteresowane wykorzystaniem VR w edukacji i terapii",
+    ],
+
     "outcomes": [
       "Zrozumienie podstaw i zaawansowanych aspektów VR",
       "Umiejętność tworzenia prostych doświadczeń VR",
@@ -121,9 +141,83 @@ const courses = [
         "name": "Piotr Wiśniewski",
         "text": "Dzięki Asystentowi VR odkryłem nowe możliwości w mojej pracy. Narzędzie to jest nieocenione w rozwoju zawodowym i osobistym."
       }
-    ]
+    ],
+    "image" : "vr2.png"
   },
   
+
+  {
+    "id": "specjalista_vr",
+    "title": "Specjalista VR",
+    "subtitle": "Rewolucja w terapii - zanurz się w przyszłość.",
+    "description": "Kurs Terapeuta VR to innowacyjne szkolenie łączące zaawansowane technologie wirtualnej rzeczywistości z nowoczesnymi metodami terapii. Przeznaczony dla psychologów, terapeutów oraz studentów psychologii, kurs ma na celu wyposażyć uczestników w wiedzę i umiejętności niezbędne do wykorzystania VR w praktyce klinicznej.",
+    "duration": "6 miesięcy",
+    "mode": "Hybrydowo",
+    "price": "4000zł",
+    "points": [
+      "Czas trwania kursu - 6 miesięcy.",
+      "Format hybrydowy łączący naukę online z sesjami praktycznymi.",
+      "Koszt kursu - 4000zł."
+    ],
+    "modules": [
+      {
+        "id": "modul1",
+        "title": "Wprowadzenie do VR",
+        "topics": [
+          "- Historia VR",
+          "- Podstawowe technologie VR",
+          "- Technologie immersyjne i ich wpływ na percepcję",
+          "- Przegląd urządzeń VR: gogle, sensory ruchu, haptics",
+          "- Bezpieczeństwo i ergonomia w środowisku VR"
+        ]
+      },
+      {
+        "id": "modul2",
+        "title": "Zastosowania terapeutyczne VR",
+        "topics": [
+          "- VR w psychoterapii",
+          "- VR w rehabilitacji",
+          "- VR w leczeniu PTSD i lęków",
+          "- Symulacje VR wspierające rozwój umiejętności społecznych",
+          "- Wirtualna ekspozycja i jej zastosowania terapeutyczne"
+        ]
+      }
+    ],
+    "requirements": [
+      "- Podstawowa wiedza z psychologii",
+      "- Znajomość obsługi komputerów",
+      "- Zainteresowanie zastosowaniami VR w psychologii i terapii",
+      "- Gotowość do nauki obsługi nowych technologii"
+    ],
+
+    "target": [
+      "- Psychologowie",
+      "- Terapeuci",
+      "- Studenci psychologii",
+    ],
+
+    
+
+
+
+    "outcomes": [
+      "Umiejętność stosowania VR w terapii",
+      "Zrozumienie mechanizmów działania VR",
+      "Opanowanie technik VR stosowanych w terapii behawioralnej i poznawczej",
+      "Umiejętność projektowania indywidualnych programów terapeutycznych"
+    ],
+    "testimonials": [
+      {
+        "name": "Jan Kowalski",
+        "text": "Kurs był rewelacyjny, dużo praktycznej wiedzy!"
+      },
+      {
+        "name": "Aleksandra Nowak",
+        "text": "Kurs otworzył mi oczy na niesamowite możliwości, jakie VR oferuje w terapii. Praktyczne warsztaty i profesjonalne materiały pozwoliły mi szybko wprowadzić te techniki do mojej praktyki."
+      }
+    ],
+    "image" : "vr3.png"
+  },
 
 
 
