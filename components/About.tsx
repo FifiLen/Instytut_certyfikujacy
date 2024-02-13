@@ -7,9 +7,9 @@ import {
 
 export function About() {
   return (
-    <div className=" bg-zinc-950">
-    <div id="About" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-20 text-white">
-    <h2 className=" my-3 text-4xl font-semibold p-2 w-fit bg-purple-600/30">O serwisie</h2>
+    <div className=" bg-zinc-950 pt-20 pb-40">
+    <div id="About" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8  text-white">
+    <h2 className=" my-3 text-4xl font-semibold p-2 w-fit bg-purple-600/40">O serwisie</h2>
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Wprowadzenie systemu opartego na ramie kwalifikacji</AccordionTrigger>

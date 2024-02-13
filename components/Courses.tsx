@@ -58,9 +58,12 @@ export function CourseCard({ course, className, ...props }: { course: typeof cou
 
 export function Courses() {
   return (
-    <div className=" bg-zinc-950">
+    <div className="bg-zinc-950">
+
+
+
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pb-32 pt-20">
-      <h4 className=" text-gray-100 text-4xl font-semibold mb-10 p-2 bg-purple-600/40 w-fit">Kursy</h4>
+      <h4 className=" text-white text-4xl font-semibold mb-10 p-2 bg-purple-600/40 w-fit">Kursy</h4>
       <div className=" flex justify-center items-center">
     <Carousel className="w-full max-w-7xl">
       
