@@ -73,6 +73,79 @@ const courses = [
   },
   
 
+  {
+    "id": "szkolenie",
+    "title": "Szkolenie",
+    "subtitle": "Rewolucja w terapii - zanurz się w przyszłość.",
+    "description": "Kurs Terapeuta VR to innowacyjne szkolenie łączące zaawansowane technologie wirtualnej rzeczywistości z nowoczesnymi metodami terapii. Przeznaczony dla psychologów, terapeutów oraz studentów psychologii, kurs ma na celu wyposażyć uczestników w wiedzę i umiejętności niezbędne do wykorzystania VR w praktyce klinicznej.",
+    "duration": "6 miesięcy",
+    "mode": "Hybrydowo",
+    "price": "4000zł",
+    "points": [
+      "Czas trwania kursu - 6 miesięcy.",
+      "Hybrydowo",
+      "Koszt kursu - 4000zł."
+    ],
+    "modules": [
+      {
+        "id": "modul1",
+        "title": "Wprowadzenie do VR",
+        "topics": [
+          "- Historia VR",
+          "- Podstawowe technologie VR",
+          "- Technologie immersyjne i ich wpływ na percepcję",
+          "- Przegląd urządzeń VR: gogle, sensory ruchu, haptics",
+          "- Bezpieczeństwo i ergonomia w środowisku VR"
+        ]
+      },
+      {
+        "id": "modul2",
+        "title": "Zastosowania terapeutyczne VR",
+        "topics": [
+          "- VR w psychoterapii",
+          "- VR w rehabilitacji",
+          "- VR w leczeniu PTSD i lęków",
+          "- Symulacje VR wspierające rozwój umiejętności społecznych",
+          "- Wirtualna ekspozycja i jej zastosowania terapeutyczne"
+        ]
+      }
+    ],
+    "requirements": [
+      "- Podstawowa wiedza z psychologii",
+      "- Znajomość obsługi komputerów",
+      "- Zainteresowanie zastosowaniami VR w psychologii i terapii",
+      "- Gotowość do nauki obsługi nowych technologii"
+    ],
+
+    "target": [
+      "- Psychologowie",
+      "- Terapeuci",
+      "- Studenci psychologii",
+    ],
+
+    
+
+
+
+    "outcomes": [
+      "Umiejętność stosowania VR w terapii",
+      "Zrozumienie mechanizmów działania VR",
+      "Opanowanie technik VR stosowanych w terapii behawioralnej i poznawczej",
+      "Umiejętność projektowania indywidualnych programów terapeutycznych"
+    ],
+    "testimonials": [
+      {
+        "name": "Jan Kowalski",
+        "text": "Kurs był rewelacyjny, dużo praktycznej wiedzy!"
+      },
+      {
+        "name": "Aleksandra Nowak",
+        "text": "Kurs otworzył mi oczy na niesamowite możliwości, jakie VR oferuje w terapii. Praktyczne warsztaty i profesjonalne materiały pozwoliły mi szybko wprowadzić te techniki do mojej praktyki."
+      }
+    ],
+    "image" : "vr3.png"
+  },
+
 
   {
     "id": "asystent_vr",

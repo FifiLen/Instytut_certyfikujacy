@@ -24,10 +24,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-black overflow-x-hidden`}>
   
+      
         <Header />
+  
         
         {children}
+     
        <Footer />
+       
         </body>
     </html>
   );
