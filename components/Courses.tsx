@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from "react"
 import {
   Carousel,
@@ -28,7 +24,7 @@ export function CourseCard({ course, className, ...props }: { course: typeof cou
         <CardDescription className='text-zinc-400'>{course.subtitle}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className=" text-zinc-100 pb-10">{course.description}</p>
+        
        
         <div className=" pb-6">
           {course.points.map((point, index) => (

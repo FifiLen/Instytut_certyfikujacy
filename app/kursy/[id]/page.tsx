@@ -119,15 +119,6 @@ export default function Kursy({ params }: { params: { id: string } }) {
                   </Badge>
                 ))}
               </div>
-
-              {/* Opinie */}
-              {/* <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Opinie</h2>
-              {course?.testimonials.map((testimonial, testiIndex) => (
-                <blockquote key={testiIndex}>
-                  <p>"{testimonial.text}"</p>
-                  <footer>- {testimonial.name}</footer>
-                </blockquote>
-              ))} */}
             </div>
           </div>
         </div>

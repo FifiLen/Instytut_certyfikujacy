@@ -1,6 +1,5 @@
 'use client'
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
@@ -42,7 +41,7 @@ export default function Header() {
                 <div className="flex flex-shrink-0 items-center">
                   <Link href="/">
                   <img
-                    className="h-7 w-auto"
+                    className="h-7 w-7"
                     src="/assets/images/instytut_certyfikujacy.svg"
                     alt="Your Company"
                   />

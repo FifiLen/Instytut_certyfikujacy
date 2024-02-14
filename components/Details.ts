@@ -9,7 +9,7 @@ const courses = [
     "price": "4000zł",
     "points": [
       "Czas trwania kursu - 6 miesięcy.",
-      "Format hybrydowy łączący naukę online z sesjami praktycznymi.",
+      "Hybrydowo",
       "Koszt kursu - 4000zł."
     ],
     "modules": [
@@ -84,7 +84,7 @@ const courses = [
     "price": "2500zł",
     "points": [
       "Czas trwania programu - 3 miesiące.",
-      "Całkowicie online - elastyczny dostęp z dowolnego miejsca i o dowolnym czasie.",
+      "Online/Offline",
       "Koszt uczestnictwa - 2500zł."
     ],
     "modules": [
@@ -156,7 +156,7 @@ const courses = [
     "price": "4000zł",
     "points": [
       "Czas trwania kursu - 6 miesięcy.",
-      "Format hybrydowy łączący naukę online z sesjami praktycznymi.",
+      "Online",
       "Koszt kursu - 4000zł."
     ],
     "modules": [
