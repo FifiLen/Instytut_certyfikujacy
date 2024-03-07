@@ -65,7 +65,7 @@ function ContactForm() {
           </Card>
         </>
       )}
-     <div className=' grid grid-cols-2 gap-6'>
+     <div className=' grid grid-cols-1 md:grid-cols-2 gap-6'>
             <div>
               <Label className='font-semibold text-lg'  htmlFor="firstName">Imie</Label>
               <Input id="firstName" type="text" name="firstName" required minLength={2} pattern="[A-Za-z]+" className={cn("w-full p-4 bg-zinc-950 border-zinc-800 text-white space-y-2")}/>

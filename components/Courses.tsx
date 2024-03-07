@@ -20,7 +20,7 @@ export function CourseCard({ course, className, ...props }: { course: typeof cou
     <Card className={cn("w-full bg-zinc-950 border-zinc-800 text-white hover:border-zinc-600 transition-all duration-500", className)} {...props}>
       <CardHeader>
         <CardTitle>{course.title}</CardTitle>
-        <CardDescription className='text-zinc-400'>{course.subtitle}</CardDescription>
+        <CardDescription className='text-zinc-400'>{course.description}</CardDescription>
       </CardHeader>
       <CardContent>
         
