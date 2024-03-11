@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from "@/lib/utils"
 
 import { Textarea } from '@/components/ui/textarea';
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
   
 
 interface Course {
@@ -42,6 +43,22 @@ function ContactForm() {
     <div className=' max-w-6xl mx-auto my-20'>
     <h2 className='my-10 text-4xl font-bold text-white bg-purple-600/40 w-fit p-2'>Skontaktuj się z nami</h2>
     <Card className={cn("w-full p-10 bg-zinc-950 border-zinc-800 text-white")}>
+    <div className=" flex-col justify-center items-center">
+        <h2 className="text-5xl text-left font-semibold mb-6 font-display text-white">
+        Instytut Certyfikujący
+        </h2>
+        
+        <ul className=' space-y-1 font-medium'>
+          <li className=' flex justify-start items-center gap-2'><FaPhoneAlt />+48 797 173 501</li>
+          <li className=' flex justify-start items-center gap-2'><FaPhoneAlt />+48 502 162 365</li>
+          <li className=' flex justify-start items-center gap-2'><FaEnvelope />4tomorrowrybnik@gmail.com</li>
+          <li className=' flex justify-start items-center gap-2'><FaMapMarkerAlt />Magnolii 25, 44-207 Rybnik</li>
+        </ul>
+
+        <p className=' text-md font-medium mt-3'>Godziny otwarcia:</p>
+        <p className=' mb-4'>Poniedziałek - Czwartek: 8:00 - 16:00</p>
+        <hr className=' mb-8'/>
+      </div>
     <form className='text-white space-y-4' onSubmit={handleSubmit}>
       
 

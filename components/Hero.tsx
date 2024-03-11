@@ -92,7 +92,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div className="max-w-3xl mx-auto mb-6" variants={itemVariants}>
-          <h1 className="text-lg text-gray-300/70 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quam aperiam nulla, optio ipsa veritatis. Consectetur ratione soluta error laudantium.</h1>
+          <h1 className="text-lg text-gray-200/90 text-center">Odkryj nasze najnowsze kursy i zdobądź certyfikaty, które otworzą przed Tobą nowe możliwości. Wspieramy Cię w rozwoju umiejętności niezbędnych na dzisiejszym rynku pracy. Nie czekaj - dołącz do naszej społeczności i zacznij realizować swoje zawodowe cele już dziś!</h1>
         </motion.div>
 
         <motion.div className="flex justify-center items-center mb-32 gap-3" variants={buttonVariants}>
@@ -148,8 +148,8 @@ export default function Hero() {
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Krztałć się. Rozwijaj. <br />Bądź dumny.
         </h2>
-        <p className="mt-6 text-lg leading-8 text-zinc-300">
-          Twój rozwój nie zna limitów. Zdobywaj nowe umiejętności i rozpychaj się łokciami na rynku pracy.
+        <p className="mt-6 text-lg leading-6 text-zinc-300">
+        Rozwój osobisty to klucz do sukcesu w dzisiejszym dynamicznym świecie. Nie ma granic dla Twojego potencjału. Zdobywaj nowe umiejętności, eksploruj nieznane obszary i poszerzaj swoje horyzonty, ponieważ tylko w ten sposób będziesz w stanie utrzymać krok z szybko zmieniającym się światem zawodowym.
         </p>
       </motion.div>
 

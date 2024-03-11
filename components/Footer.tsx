@@ -1,11 +1,78 @@
 import React from 'react';
+import Link from 'next/link';
+import { FaAngleRight, FaFacebookF, FaInstagram, FaPhone, FaMailBulk } from 'react-icons/fa';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-zinc-950 text-white border-t-[0.5px] border-zinc-700/80">
-      <div className="container mx-auto px-4 text-center py-4">
-        <div className="">
-          <p className=' text-xs'>© 2024 Skillify. Wszelkie prawa zastrzeżone.</p>
+    <footer className="py-16 bg-zinc-950 border-t">
+      <div className="container mx-auto max-w-6xl px-4 xl:px-0 text-white justify-between">
+        <div className="grid grid-cols-1 xl:grid-cols-5 gap-10 justify-between">
+          <div className="footer-section text-center">
+            <img src="/assets/images/instytut_certyfikujacy.svg" alt="Logo" className="w-20 h-20" />
+          </div>
+          <div className="footer-section">
+            <h4 className="font-semibold mb-4 text-lg">Menu</h4>
+            <ul className="list-none p-0">
+              {['/', '/kursy','/zapisy', '/kontakt'].map((href, idx) => (
+                <li key={idx} className='mb-2'>
+                  <Link href={href}>
+                    <span className="flex items-center space-x-2 text-zinc-300 font-medium hover:text-purple-500">
+                      <FaAngleRight />
+                      <span>{['Strona główna', 'Kursy','Zapisy', 'Kontakt'][idx]}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+          <div className="footer-section">
+            <h4 className="font-semibold mb-4 text-lg">Kursy</h4>
+            <ul className="list-none p-0">
+              {['/Join','/O_nas','/Wynajem','/Grafiki','/assets/oferta-PPP-Magnolia.pdf'].map((href, idx) => (
+                <li key={idx} className='mb-2'>
+                  <Link href={href}>
+                    <span className="flex items-center space-x-2 text-zinc-300 font-medium hover:text-purple-500">
+                      <FaAngleRight />
+                      <span>{['Dołącz do Magnolii', 'O nas','Wynajem','Grafiki na stronie','Oferta poradni'][idx]}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+
+          <div className="footer-section">
+            <h4 className="font-semibold mb-4 text-lg">Kontakt</h4>
+            <ul className="list-none p-0">
+              {['/', '/','/','/','/','/'].map((href, idx) => (
+                <li key={idx} className='mb-2'>
+                  <Link href={href}>
+                    <span className="flex items-center space-x-2 text-zinc-300 font-medium hover:text-purple-500">
+                      
+                      <span>{['+48 797 173 501', '+48 502 162 365', '+48 690 515 224', '+48 503 192 950','Magnolii 25, Rybnik','4tomorrowrybnik@gmail.com', ][idx]}</span>
+                      
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+
+
+        
+
+
+
+          
+
+
+
         </div>
       </div>
     </footer>
