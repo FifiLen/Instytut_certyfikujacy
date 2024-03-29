@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import Stopka from "@/components/Stopka";
 
 
-const poppins = Poppins({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]});
+const poppins = Poppins({subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]});
 
 const inter = Inter({ subsets: ["latin"] });
 
