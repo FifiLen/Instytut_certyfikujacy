@@ -1,20 +1,16 @@
 'use client'
 import { motion } from 'framer-motion';
-import { Badge } from "@/components/ui/badge";
-import { ArrowRightIcon, RocketIcon, MobileIcon } from '@radix-ui/react-icons';
-import { Button } from "./ui/button";
+
 import Link from "next/link";
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import React from 'react';
-import { Just_Another_Hand } from 'next/font/google';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 
-const justAnotherHand = Just_Another_Hand({ weight: ['400']});
 
 import { Poppins } from 'next/font/google';
 
-const poppins = Poppins({ weight: ['500']});
-const boldpoppins = Poppins({ weight: ['700']});
+const poppins = Poppins({subsets: ["latin"], weight: ['500']});
+const boldpoppins = Poppins({subsets: ["latin"], weight: ['700']});
 
 // Definicje wariantów animacji dla kontenera i poszczególnych elementów
 const containerVariants = {

@@ -10,14 +10,12 @@ import { cn } from "@/lib/utils"
 import Link from 'next/link';
 import courses from '@/components/Details';
 
-import { Just_Another_Hand } from "next/font/google";
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 type CardProps = React.ComponentProps<typeof Card>
 
-const  justHand = Just_Another_Hand({ weight: ['400']})
 
 export function CourseCard({ course, className, ...props }: { course: typeof courses[0] } & CardProps) {
   return (

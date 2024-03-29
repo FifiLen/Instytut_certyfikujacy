@@ -1,11 +1,10 @@
 'use client'
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { Poppins } from 'next/font/google';
 
-const poppins = Poppins({ weight: ['500']});
+const poppins = Poppins({subsets: ['latin'], weight: ['500']});
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
