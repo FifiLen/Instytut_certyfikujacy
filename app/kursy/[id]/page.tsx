@@ -3,7 +3,6 @@
 import courses from "@/components/Details";
 import { ArrowRightIcon} from '@heroicons/react/20/solid'
 
-import { Righteous } from "next/font/google";
 
 import { Badge } from "@/components/ui/badge";
 import {
@@ -14,7 +13,6 @@ import {
 } from "@/components/ui/accordion"
 import { motion } from "framer-motion";
 
-const righteous = Righteous({ weight: ['400']})
 
 
 export default function Kursy({ params }: { params: { id: string } }) {
@@ -50,7 +48,7 @@ export default function Kursy({ params }: { params: { id: string } }) {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className={`${righteous.className} mt-6 text-lg font-medium italic leading-8 text-zinc-800`}
+              className={` mt-6 text-lg font-medium italic leading-8 text-zinc-800`}
             >
               {course?.subtitle}
             </motion.p>
@@ -82,7 +80,7 @@ export default function Kursy({ params }: { params: { id: string } }) {
               </motion.p>
 
 
-              
+
               {/* Lista punktów kursu */}
               <ul role="list" className="mt-8 space-y-8 font-medium text-zinc-600">
                 {course?.points.map((point, index) => (
