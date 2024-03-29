@@ -2,9 +2,13 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({ weight: ['500']});
 
 const navigation = [
-  { name: 'Strona główna', href: '/', current: true },
+  { name: 'Home', href: '/', current: true },
   { name: 'Kursy', href: '/kursy', current: false },
   { name: 'Zapisy', href: '/zapisy', current: false },
   { name: 'Kontakt', href: '/kontakt', current: false },
@@ -20,67 +24,64 @@ export default function Header() {
 
   
   return (
-    <div className=' bg-zinc-950 '>
-    <Disclosure as="nav" className="bg-transparent border-b-[0.1px] border-gray-400/20 sticky top-0 z-50 ">
+    <div className={`  bg-white py-7`}>
+    <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <Link href="/">
+          <div className="max-w-7xl mx-auto">
+            <div className="relative flex justify-between items-center">
+  
+              {/* Logo - lewa strona */}
+              <div className="">
+                <Link href="/">
                   <img
-                    className="h-7 w-7"
-                    src="/assets/images/instytut_certyfikujacy.svg"
+                    width={220}
+                    height={220}
+                    src="/assets/images/logo.svg"
                     alt="Your Company"
                   />
-                  </Link>
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-600/30 text-white' : 'text-gray-300 hover:bg-gray-600/30 hover:text-white',
-                          'rounded-md px-3 py-2 text-[13px] font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                </Link>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="relative rounded-full bg-gray-600/30 p-1 text-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-              </div>
+  
+              {/* Centrum - Nawigacja */}
+              <div className="flex-1 flex justify-center items-center">
+  <div className="hidden sm:block">
+    <div className="flex space-x-1">
+      {navigation.map((item) => (
+        <Link
+          key={item.name}
+          href={item.href}
+          className={classNames(
+            `${poppins.className} rounded-full py-[6px] px-5 text-[12px] font-medium`,
+            item.current ? 'text-black border-[1.9px] border-zinc-600 ' : 'text-black border-[1.9px] border-gray-300 hover:border-black'
+          )}
+          aria-current={item.current ? 'page' : undefined}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+</div>
+
+  
+              {/* Prawa strona - Ikona powiadomień */}
+             
+              <Link
+  href={"/kontakt"}
+  className="flex items-center justify-between rounded-full border-[1.6px] border-purple-500 py-[8px] pr-2 pl-4 text-purple-500 text-[13px] font-medium"
+>
+  <p className={`${poppins.className} text-center flex-1`}>Skontaktuj się z nami</p>
+  <BsArrowUpRightCircleFill className='text-xl ml-2'/>
+</Link>
+                
+              
             </div>
           </div>
-
+  
+          {/* Menu mobilne */}
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -88,7 +89,7 @@ export default function Header() {
                   href={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    'block rounded-full px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
@@ -100,6 +101,7 @@ export default function Header() {
         </>
       )}
     </Disclosure>
-    </div>
+  </div>
+  
   )
 }

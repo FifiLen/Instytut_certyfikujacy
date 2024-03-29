@@ -71,6 +71,88 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-foreground text-background;
   }
 }
+
+.scale-up {
+  transform: scale(1.5); /* Zwiększa rozmiar o 20% */
+  transition: transform 0.3s ease-in-out; /* Dodaje płynne przejście */
+}
+
+/* Definicja kluczowych klatek animacji 'rotate' */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Zastosowanie animacji do obrazka */
+.rotating {
+  animation: rotate 20s linear infinite;
+}
+
+.card-special-1 {
+  background-image: url("/assets/images/Group-3.svg");
+  background-repeat: no-repeat;
+  background-color: #dbb7ff94;
+
+  /* Ustawia rozmiar tła, aby był mniejszy niż cała karta */
+  background-size: 40% auto; /* Możesz dostosować ten rozmiar według potrzeb */
+
+  /* Pozycjonuje tło w prawym górnym rogu karty */
+  background-position: top right -70px;
+  position: relative;
+  overflow: hidden;
+
+  /* Przykładowy efekt 'maski' za pomocą clip-path, możesz dostosować tę ścieżkę */
+}
+
+.card-special-2 {
+  background-color: rgba(169, 85, 247, 0.807);
+  background-image: url("/assets/images/cardBg.svg");
+  background-repeat: no-repeat;
+  
+
+  /* Ustawia rozmiar tła, aby był mniejszy niż cała karta */
+  background-size: 40% auto; /* Możesz dostosować ten rozmiar według potrzeb */
+
+  /* Pozycjonuje tło w prawym górnym rogu karty */
+  background-position: top right -70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-special-3 {
+  background-color: rgb(255, 219, 74);
+  background-image: url("/assets/images/cardBg-3.svg");
+  background-repeat: no-repeat;
+  
+
+  /* Ustawia rozmiar tła, aby był mniejszy niż cała karta */
+  background-size: 40% auto; /* Możesz dostosować ten rozmiar według potrzeb */
+
+  /* Pozycjonuje tło w prawym górnym rogu karty */
+  background-position: top right -70px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.card-special-zsk {
+  background-image: url("/assets/images/cardBgZsk.svg");
+  background-repeat: no-repeat;
+  
+
+  /* Ustawia rozmiar tła, aby był mniejszy niż cała karta */
+  background-size: 30% auto; /* Możesz dostosować ten rozmiar według potrzeb */
+
+  /* Pozycjonuje tło w prawym górnym rogu karty */
+  background-position: top right -70px;
+  position: relative;
+  overflow: hidden;
+}
+

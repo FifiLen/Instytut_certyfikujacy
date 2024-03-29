@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 
 import { Textarea } from '@/components/ui/textarea';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
+import { BsArrowUpRightCircleFill } from 'react-icons/bs';
   
 
 interface Course {
@@ -40,24 +41,22 @@ function ContactForm() {
 
   return (
 
-    <div className=' max-w-6xl mx-auto my-20'>
-    <h2 className='my-10 text-4xl font-bold text-white bg-purple-600/40 w-fit p-2'>Skontaktuj się z nami</h2>
-    <Card className={cn("w-full p-10 bg-zinc-950 border-zinc-800 text-white")}>
+    <div className=' max-w-7xl mx-auto my-20'>
+    <h2 className=" text-zinc-800 text-6xl font-[700] w-fit pb-10 pt-10">Skontaktuj się<span className={` text-yellow-400`}> z nami</span></h2>
+    <Card className={cn("w-full p-10 bg-zinc-800 border-transparent text-white rounded-[40px]")}>
     <div className=" flex-col justify-center items-center">
-        <h2 className="text-5xl text-left font-semibold mb-6 font-display text-white">
-        Instytut Certyfikujący
-        </h2>
+        <img src="/assets/images/logoFooter.svg" alt="" className=' mb-5'/>
         
-        <ul className=' space-y-1 font-medium'>
+        <ul className=' space-y-1 font-medium '>
           <li className=' flex justify-start items-center gap-2'><FaPhoneAlt />+48 797 173 501</li>
           <li className=' flex justify-start items-center gap-2'><FaPhoneAlt />+48 502 162 365</li>
           <li className=' flex justify-start items-center gap-2'><FaEnvelope />4tomorrowrybnik@gmail.com</li>
           <li className=' flex justify-start items-center gap-2'><FaMapMarkerAlt />Magnolii 25, 44-207 Rybnik</li>
         </ul>
 
-        <p className=' text-md font-medium mt-3'>Godziny otwarcia:</p>
-        <p className=' mb-4'>Poniedziałek - Czwartek: 8:00 - 16:00</p>
-        <hr className=' mb-8'/>
+        <p className='  text-md font-medium mt-3'>Godziny otwarcia:</p>
+        <p className='  mb-4'>Poniedziałek - Czwartek: 8:00 - 16:00</p>
+        <hr className=' bg-zinc-800 mb-8'/>
       </div>
     <form className='text-white space-y-4' onSubmit={handleSubmit}>
       
@@ -65,33 +64,38 @@ function ContactForm() {
      <div className=' grid grid-cols-2 gap-6'>
             <div>
               <Label className='font-semibold text-lg'  htmlFor="firstName">Imie</Label>
-              <Input id="firstName" type="text" name="firstName" required minLength={2} pattern="[A-Za-z]+" className={cn("w-full p-4 bg-zinc-950 border-zinc-800 text-white space-y-2")}/>
+              <Input id="firstName" type="text" name="firstName" placeholder='Podaj swoje imię' required minLength={2} pattern="[A-Za-z]+" className={cn("w-full p-4 bg-yellow-300 border-yellow-400 text-zinc-800 font-semibold space-y-2 rounded-xl")}/>
               <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
             </div>
             <div>
               <Label className='font-semibold text-lg' htmlFor="lastName">Nazwisko</Label>
-              <Input id="lastName" type="text" name="lastName" required minLength={2} pattern="[A-Za-z]+" className={cn("w-full p-4 bg-zinc-950 border-zinc-800 text-white space-y-2")}/>
+              <Input id="lastName" type="text" name="lastName" placeholder='Podaj swoje nazwisko' required minLength={2} pattern="[A-Za-z]+" className={cn("w-full p-4 bg-yellow-300 border-yellow-400 text-zinc-800 font-semibold space-y-2 rounded-xl")}/>
               <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
             </div>
             <div>
               <Label className='font-semibold text-lg' htmlFor="phone">Numer telefonu</Label>
-              <Input id="phone" type="tel" name="phone" required className={cn("w-full p-4 bg-zinc-950 border-zinc-800 text-white space-y-2")}/>
+              <Input id="phone" type="tel" name="phone" placeholder='Podaj swój numer telefonu' required className={cn("w-full p-4 bg-yellow-300 border-yellow-400 text-zinc-800 font-semibold space-y-2 rounded-xl")}/>
               <ValidationError prefix="Phone" field="phone" errors={state.errors} />
             </div>
             <div>
               <Label className='font-semibold text-lg' htmlFor="email">Email</Label>
-              <Input id="email" type="email" name="email" required className={cn("w-full p-4 bg-zinc-950 border-zinc-800 text-white space-y-2")}/>
+              <Input id="email" type="email" name="email" placeholder='Podaj swój adres email' required className={cn("w-full p-4 bg-yellow-300 border-yellow-400 text-zinc-800 font-semibold space-y-2 rounded-xl")}/>
               <ValidationError prefix="Email" field="email" errors={state.errors} />
             </div>
-            <div className='col-span-2'>
+            <div className='col-span-2 mb-4'>
                 <Label className='font-semibold text-lg' htmlFor="message">Wiadomość</Label>
-                <Textarea placeholder='Napisz swoją wiadomość' id="message" name="message" required  className={cn("w-full p-4 bg-zinc-950 border-zinc-800 text-white space-y-2")}/>
+                <Textarea placeholder='Napisz swoją wiadomość…' id="message" name="message" required  className={cn("w-full p-4 bg-yellow-300 border-yellow-400 text-zinc-800 font-semibold space-y-2 rounded-xl")}/>
                 <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
            </div>
            
       
-      <Button type="submit" disabled={state.submitting} className={cn("w-fit p-4 bg-orange-500/40 border-orange-600 border hover:bg-orange-600")}>Wyślij wiadomość</Button>
+      <Button type="submit" disabled={state.submitting} className={cn("flex items-center justify-between rounded-full border-[1.6px] border-purple-500 bg-purple-500 py-[8px] pr-2 pl-4 text-white text-[13px] font-medium")}>
+        
+        Wyślij wiadomość
+        <BsArrowUpRightCircleFill className='text-xl ml-2'/>
+
+        </Button>
     </form>
     </Card>
     </div>

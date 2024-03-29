@@ -10,40 +10,37 @@ import { cn } from "@/lib/utils"
 import Link from 'next/link';
 import courses from '@/components/Details';
 
+import { Just_Another_Hand } from "next/font/google";
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 type CardProps = React.ComponentProps<typeof Card>
 
+const  justHand = Just_Another_Hand({ weight: ['400']})
 
 export function CourseCard({ course, className, ...props }: { course: typeof courses[0] } & CardProps) {
   return (
-    <Card className={cn("w-full bg-zinc-950 border-zinc-800 text-white hover:border-zinc-600 transition-all duration-500", className)} {...props}>
+    <Card className={cn("w-full bg-indigo-400 text-zinc-800 rounded-[40px]", className)} {...props}>
       <CardHeader>
-        <CardTitle>{course.title}</CardTitle>
-        <CardDescription className='text-zinc-400'>{course.description}</CardDescription>
+        <div>
+        <img src={course.cardImage} width={120} alt="" />
+        </div>
+        <CardTitle className={cn(" pb-3 pt-10")}>{course.title}</CardTitle>
+        <CardDescription className='text-zinc-800 leading-8'>{course.description}</CardDescription>
       </CardHeader>
       <CardContent>
         
        
-        <div className=" pb-6">
-          {course.points.map((point, index) => (
-            <div key={index} className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
-              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-gradient-to-r from-pink-500 to-blue-500" />
-              <div className="space-y-1">
-                <p className="text-sm text-zinc-300 leading-none">
-                  {point}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
       </CardContent>
       <CardFooter>
-        <Link href={`/kursy/${course.id}`}>
-          <p className="w-full bg-zinc-950 border-zinc-800 border p-3 rounded-md font-semibold text-xs hover:bg-zinc-800 text-white">
-            Szczegóły kursu
-          </p>
-        </Link>
+      <Link
+  href={`/kursy/${course.id}`}
+  className="flex items-center justify-between rounded-full border-[1.2px] bg-white border-zinc-800 py-[8px] pr-2 pl-4 text-zinc-800 text-[13px] font-medium"
+>
+  <p className={` text-center flex-1`}>Sprawdź szczegóły</p>
+  <BsArrowUpRightCircleFill className='text-xl ml-2'/>
+</Link>
       </CardFooter>
     </Card>
   )
@@ -53,21 +50,30 @@ export function CourseCard({ course, className, ...props }: { course: typeof cou
 
 export function Courses() {
   return (
-    <div className="bg-zinc-950">
+    <div>
 
 
 
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pb-32 pt-20">
-      <h4 className=" text-white text-4xl font-semibold mb-10 p-2 bg-purple-600/40 w-fit">Kursy</h4>
+    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pb-32 ">
+      <div className=" grid grid-cols-2 justify-between">
+        <div className="col-span-1 grid justify-start items-center">
+      <h4 className=" text-zinc-800 text-6xl font-[700] w-fit pt-10">Nasze <br /><span className={` text-yellow-400`}>najnowsze kursy</span><br /> certyfikowane</h4>
+      </div>
+
+      <div className="col-span-1 grid justify-end">
+      <img width={400} src="/assets/images/Group9-2.svg"  alt="" />
+      </div>
+
+      </div>
       <div className=" flex justify-center items-center">
     <Carousel className="w-full max-w-7xl">
       
-      <CarouselContent className="-ml-1">
+      <CarouselContent className="-ml-1 flex">
 
       
-          {courses.map((course) => (
+          {courses.map((course, index) => (
             <CarouselItem key={course.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
-            <CourseCard key={course.id} course={course} />
+            <CourseCard key={course.id} course={course} className={`card-special-${index + 1}`}/>
             </CarouselItem>
           ))}
         

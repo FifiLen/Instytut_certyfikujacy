@@ -5,11 +5,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+import Link from "next/link"
+
+import courses from "./Details"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card"
+import { BsArrowUpRightCircleFill } from "react-icons/bs"
+
 export function About() {
   return (
-    <div className="bg-zinc-950 pt-20 pb-40">
-      <div id="About" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-white">
-        <h2 className="my-3 text-4xl font-semibold p-2 w-fit bg-purple-600/40">Informacje o ZSK</h2>
+    
+
+    <div className="mx-auto max-w-7xl grid grid-cols-2 mt-20 mb-40 gap-10">
+
+      <div id="About" className=" px-2 sm:px-6 lg:px-8 text-black">
+      <h4 className=" text-zinc-800 text-6xl font-[700] w-fit pb-10">Informacje o<span className={` text-red-500/60`}> ZSK</span></h4>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>Wprowadzenie Zintegrowanego Systemu Kwalifikacji</AccordionTrigger>
@@ -48,7 +57,49 @@ export function About() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <div className="mt-5">
+  <iframe
+    className="rounded-[30px] border border-zinc-800"
+    width="100%"
+    height="197"
+    src="https://www.youtube.com/embed/RhW5C8_VVso"
+    title="Nowe możliwości rozwoju zawodowego - era walidacji"
+    
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  ></iframe>
+</div>
+        
       </div>
+    
+
+    <div>
+    <Card className="w-full bg-red-500/60 text-zinc-800 rounded-[40px] card-special-zsk">
+          <CardHeader>
+            <div>
+              <img src="/assets/images/cardImgZsk.svg" width={120} alt="Opis obrazu" />
+            </div>
+            <CardTitle className="pb-3 pt-10">Czym właściwie jest ZSK?</CardTitle>
+
+            <CardDescription className="text-zinc-800 leading-8">
+            ZSK, czyli Zintegrowany System Kwalifikacji, to innowacyjne narzędzie służące uporządkowaniu i ustandaryzowaniu procesu potwierdzania kompetencji w Polsce. Zintegruje on różnorodne kwalifikacje w jednym, łatwo dostępnym rejestrze, zapewniając jednocześnie przejrzyste i jednolite zasady ich weryfikacji. Dzięki ZSK, zarówno pracownicy, jak i pracodawcy zyskują narzędzie, które pozwala na wiarygodne prezentowanie i rozpoznawanie kompetencji, niezależnie od sposobu, w jaki zostały one zdobyte. System ten, wprowadzony w odpowiedzi na dynamiczne zmiany na rynku pracy, ma na celu nie tylko podniesienie poziomu kapitału ludzkiego w Polsce, ale także ułatwienie mobilności zawodowej zarówno na terenie kraju, jak i w Unii Europejskiej.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            
+          </CardContent>
+          <CardFooter>
+            <Link href="#twoj-link">
+              <div className="flex items-center justify-between rounded-full border-[1.2px] bg-white border-zinc-800 py-[8px] pr-2 pl-4 text-zinc-800 text-[13px] font-medium hover:bg-zinc-800 hover:text-white">
+                <p className="text-center flex-1">Dowiedz się więcej o ZSK</p>
+                <BsArrowUpRightCircleFill className="text-xl ml-2"/>
+              </div>
+            </Link>
+          </CardFooter>
+        </Card>
     </div>
+    </div>
+    
   )
 }

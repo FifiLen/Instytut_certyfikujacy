@@ -3,6 +3,8 @@
 import courses from "@/components/Details";
 import { ArrowRightIcon} from '@heroicons/react/20/solid'
 
+import { Righteous } from "next/font/google";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -12,11 +14,12 @@ import {
 } from "@/components/ui/accordion"
 import { motion } from "framer-motion";
 
+const righteous = Righteous({ weight: ['400']})
+
 
 export default function Kursy({ params }: { params: { id: string } }) {
   const course = courses.find(course => course.id === params.id);
 
-  const MotionBadge = motion(Badge);
 
   const MotionAccordion = motion(Accordion);
 
@@ -35,7 +38,6 @@ export default function Kursy({ params }: { params: { id: string } }) {
           className="lg:pr-4"
         >
           <div className="lg:max-w-lg">
-            <p className="text-base font-semibold leading-7 text-purple-600">{`{ ${course?.id} }`}</p>
             <motion.h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +50,7 @@ export default function Kursy({ params }: { params: { id: string } }) {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-6 text-lg font-medium italic leading-8 text-zinc-800"
+              className={`${righteous.className} mt-6 text-lg font-medium italic leading-8 text-zinc-800`}
             >
               {course?.subtitle}
             </motion.p>
@@ -78,6 +80,9 @@ export default function Kursy({ params }: { params: { id: string } }) {
               transition={{ duration: 0.5, delay: 0.8 }}>
                 {course?.description}
               </motion.p>
+
+
+              
               {/* Lista punktów kursu */}
               <ul role="list" className="mt-8 space-y-8 font-medium text-zinc-600">
                 {course?.points.map((point, index) => (
