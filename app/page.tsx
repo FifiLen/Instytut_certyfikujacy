@@ -12,8 +12,8 @@ export default function Home() {
     <main>
       
       
-      <Hero />
-      <ExpandedSection />
+      {/* <Hero /> */}
+      {/* <ExpandedSection /> */}
       <Courses />
       {/* <About /> */}
 
