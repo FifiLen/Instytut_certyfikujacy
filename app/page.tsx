@@ -3,7 +3,6 @@
 import { Courses } from "@/components/Courses";
 import ExpandedSection from "@/components/ExpandedSection";
 import Hero from "@/components/Hero";
-import Stopka from "@/components/Stopka";
 
 
 

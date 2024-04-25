@@ -1,136 +1,72 @@
 'use client'
-import React from 'react'
-import courses from './Details';
+import React from 'react';
 import Link from 'next/link';
 import FooterForm from './FooterForm';
-import { Separator } from "@/components/ui/separator"
-
+import { Separator } from "@/components/ui/separator";
+import courses from './Details';
 
 const Stopka = () => {
   return (
-    <footer className=' bg-zinc-800 w-full '>
-  
-    <div className="grid grid-cols-4 grid-rows-7">
+    <footer className='bg-zinc-900 text-gray-300 text-sm'>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-8 gap-8">
 
-        <div className="col-span-2 row-span-2 bg-zinc-800  border-r flex items-center">
-          <div className='max-w-2xl mx-auto gap-5'>
-
-            <div className='flex justify-center items-center'>
-            <img src="/assets/images/logoFooter.svg" alt="Logo" width={250} />
-            </div>
-
-            <div className='flex items-center pt-4'>
-              <p className=' text-sm font-[400] text-gray-300'>Odkryj nasze najnowsze kursy i zdobądź certyfikaty.</p>
-            </div>
-
-          </div>
+        <div className="flex flex-col items-center md:items-start md:col-span-2 lg:col-span-1 mb-8 md:mb-0">
+          <img src="/assets/images/logoFooter.svg" alt="Logo" className="mb-4" />
+          <p>Odkryj nasze najnowsze kursy i zdobądź certyfikaty.</p>
         </div>
 
-
-        <div className="col-span-2 row-span-4 col-start-3 bg-zinc-800 flex items-center mx-32">
-       
-       <div>
-      <FooterForm />
-      </div>
-
-
+        <div className="md:col-span-1 lg:col-span-3 mb-8 md:mb-0">
+          <FooterForm />
         </div>
 
-
-
-
-
-        <div className="col-span-2 row-span-2 row-start-3 bg-zinc-800 border-t border-r flex items-center">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 max-w-2xl mx-auto my-10">
-        
-          <div className="">
-            <h4 className="font-semibold mb-4 text-xl">Menu</h4>
-            <ul className="list-none p-0">
-              {['/', '/kursy','/zapisy', '/kontakt'].map((href, idx) => (
-                <li key={idx} className='mb-2'>
-                  <Link href={href}>
-                    <span className="flex items-center space-x-2 text-zinc-300 font-[400] text-sm hover:text-purple-500">
-                      
-                      <span>{['Strona główna', 'Kursy','Zapisy', 'Kontakt'][idx]}</span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-
-          <div className="">
-  <h4 className="font-semibold mb-4 text-xl">Kursy</h4>
-  <ul className="list-none p-0">
-    {courses.map((course, id) => (
-      <li key={id} className='mb-2'>
-        <Link href={`/kursy/${course.id}`}>
-          <span className="flex items-center space-x-2 text-zinc-300 font-[400] text-sm hover:text-purple-500">
-            
-            <span>{course.title}</span>
-          </span>
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
-
-
-          <div className="">
-            <h4 className="font-semibold mb-4 text-xl">Kontakt</h4>
-            <ul className="list-none p-0">
-              {['/', '/','/','/','/','/'].map((href, idx) => (
-                <li key={idx} className='mb-2'>
-                  <Link href={href}>
-                    <span className="flex items-center space-x-2 text-zinc-300 font-[400] text-sm hover:text-purple-500">
-                      
-                      <span>{['+48 797 173 501', '+48 502 162 365','Magnolii 25, Rybnik', ][idx]}</span>
-                      
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-
-
-
-        
-
-
-
-          
-
-
-
-        </div>
-        </div>
-
-        <div className="footerBg col-span-4 row-span-3 row-start-5 bg-zinc-800 border-t grid justify-start pl-32 pb-10 items-end">
-          <div className='max-w-7xl mx-auto'>
-          <ul className=' flex gap-6 text-sm font-bold'>
-            <li>©2024 4Tomorrowrybnik</li>
-            <li><Separator orientation="vertical" /></li>
-            <li>Kursy</li>
-            <li><Separator orientation="vertical" /></li>
-            <li>Zapisy</li>
-            <li><Separator orientation="vertical" /></li>
-            <li>Kontakt</li>
-
-
-
-
-            
+        <div className="md:col-span-1 hidden lg:col-span-1 mb-8 md:mb-0">
+          <h4 className="font-semibold text-xl mb-4">Menu</h4>
+          <ul>
+            {['/', '/kursy', '/zapisy', '/kontakt'].map((href, idx) => (
+              <li key={idx}>
+                <Link href={href}>
+                  <p className="hover:text-purple-500">{['Strona główna', 'Kursy', 'Zapisy', 'Kontakt'][idx]}</p>
+                </Link>
+              </li>
+            ))}
           </ul>
-          </div>
         </div>
-    </div>
+
+        <div className="md:col-span-1 lg:col-span-1 mb-8 md:mb-0">
+          <h4 className="font-semibold text-xl mb-4">Kursy</h4>
+          <ul>
+            {courses.map((course, id) => (
+              <li key={id}>
+                <Link href={`/kursy/${course.id}`}>
+                  <p className="hover:text-purple-500">{course.title}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="md:col-span-1 lg:col-span-1">
+          <h4 className="font-semibold text-xl mb-4">Kontakt</h4>
+          <ul>
+            {['+48 797 173 501', '+48 502 162 365','Magnolii 25, Rybnik'].map((contact, idx) => (
+              <li key={idx}>{contact}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="col-span-1 md:col-span-3 lg:col-span-4 text-center md:text-left">
+          <Separator />
+          <ul className='flex flex-col md:flex-row justify-center md:justify-start gap-6 mt-4'>
+            <li>©2024 4Tomorrowrybnik</li>
+            <li>Kursy</li>
+            <li>Zapisy</li>
+            <li>Kontakt</li>
+          </ul>
+        </div>
+
+      </div>
     </footer>
   )
 }
 
-export default Stopka
+export default Stopka;
